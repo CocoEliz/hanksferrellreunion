@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Hanks-Ferrell Family Reunion 2027</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-        header { background: #3a6ea5; color: white; padding: 2rem 1rem; text-align: center; }
-        nav { background: #24496e; padding: 1rem 0; }
-        nav a {
-            color: white; text-decoration: none; margin: 0 1rem;
-            font-weight: bold; transition: color 0.2s;
+        :root {
+            --royal-purple: #7851A9;
+            --white: #fff;
+            --light-gray: #f9f9f9;
         }
-        nav a:hover { color: #ffd700; }
-        .container { max-width: 700px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
-        .countdown { font-size: 2rem; color: #24496e; margin-top: 1rem; }
-        footer { text-align: center; color: #888; margin: 2rem 0 0 0; }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--light-gray);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: var(--royal-purple);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        nav {
+            background: var(--white);
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 2px solid var(--royal-purple);
+        }
+        nav a {
+            color: var(--royal-purple);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.2s, background 0.2s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background: var(--royal-purple);
+            color: var(--white);
+        }
+        .container {
+            max-width: 700px;
+            margin: 2rem auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #0001;
+        }
+        .countdown {
+            font-size: 2rem;
+            color: var(--white);
+            margin-top: 1rem;
+            background: var(--royal-purple);
+            padding: 1rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        footer {
+            text-align: center;
+            color: var(--royal-purple);
+            margin: 2rem 0 0 0;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +75,7 @@
     <nav>
         <a href="#our-family-story">Our Family Story</a>
         <a href="#reunion-history">Reunion History</a>
-        <a href="#2025-reunion">2025 Reunion</a>
+        <a href="#2027-reunion">2027 Reunion</a>
         <a href="#2009-reunion">2009 Reunion</a>
         <a href="#gallery">Gallery</a>
         <a href="#store">Store</a>
@@ -38,12 +86,12 @@
         <!-- Add more homepage content here -->
     </div>
     <footer>
-        &copy; 2025 Hanks-Ferrell Family Reunion
+        &copy; 2027 Hanks-Ferrell Family Reunion
     </footer>
 
     <!-- Countdown Clock Script -->
     <script>
-        // Set the date for the reunion (update as needed)
+        // Set the date for the 2027 reunion
         const reunionDate = new Date("July 18, 2027 09:00:00").getTime();
 
         function updateCountdown() {
