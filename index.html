@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hanks-Ferrell Family Reunion 2027</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+        header { background: #3a6ea5; color: white; padding: 2rem 1rem; text-align: center; }
+        nav { background: #24496e; padding: 1rem 0; }
+        nav a {
+            color: white; text-decoration: none; margin: 0 1rem;
+            font-weight: bold; transition: color 0.2s;
+        }
+        nav a:hover { color: #ffd700; }
+        .container { max-width: 700px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+        .countdown { font-size: 2rem; color: #24496e; margin-top: 1rem; }
+        footer { text-align: center; color: #888; margin: 2rem 0 0 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Hanks-Ferrell Family Reunion 2027!</h1>
+        <h2>July 18-20, 2027 &mdash; Linden, Texas</h2>
+        <div class="countdown" id="countdown"></div>
+    </header>
+    <nav>
+        <a href="#our-family-story">Our Family Story</a>
+        <a href="#reunion-history">Reunion History</a>
+        <a href="#2025-reunion">2025 Reunion</a>
+        <a href="#2009-reunion">2009 Reunion</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#store">Store</a>
+    </nav>
+    <div class="container">
+        <h2>Event Headline</h2>
+        <p>Join us for a weekend of celebration, connection, and memories as the Hanks-Ferrell family gathers once again!</p>
+        <!-- Add more homepage content here -->
+    </div>
+    <footer>
+        &copy; 2025 Hanks-Ferrell Family Reunion
+    </footer>
+
+    <!-- Countdown Clock Script -->
+    <script>
+        // Set the date for the reunion (update as needed)
+        const reunionDate = new Date("July 18, 2027 09:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = reunionDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "The reunion has started!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s until the reunion!";
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
