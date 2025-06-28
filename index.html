@@ -72,3 +72,112 @@
             padding: 0.75rem 1rem;
             text-decoration: none;
             display: block;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            background: var(--white);
+        }
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        .nav-menu:hover .dropdown-content {
+            display: block;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 3rem;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 1rem 0.5rem 1rem;
+        }
+        .event-date {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        .countdown {
+            font-size: 2.5rem;
+            color: var(--white);
+            background: var(--royal-purple);
+            padding: 1.5rem 2.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: 0 2px 8px #0002;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            color: var(--royal-purple);
+            margin: 2rem 0 0 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <nav>
+            <div class="nav-menu">
+                <button class="dropbtn">Our Family Story</button>
+                <div class="dropdown-content">
+                    <a href="#our-genealogy">Our Genealogy</a>
+                    <a href="#family-tree">Hanks-Ferrell Family Tree</a>
+                    <a href="#geography">Geography of Family</a>
+                    <a href="#in-memoriam">In Memoriam</a>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <button class="dropbtn">Reunion History</button>
+                <div class="dropdown-content">
+                    <a href="#reunion-committee">Reunion Committee</a>
+                    <a href="#family-dues">Family Dues</a>
+                    <a href="#financials">Financials</a>
+                </div>
+            </div>
+            <a class="nav-link" href="#2027-reunion">2027 Reunion</a>
+            <a class="nav-link" href="#2009-reunion">2009 Reunion</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#store">Store</a>
+        </nav>
+        <div class="main-content">
+            <header>
+                <h1>Hanks-Ferrell Family Reunion 2027</h1>
+                <div class="event-date">July 18-20, 2027 &mdash; Linden, Texas</div>
+            </header>
+            <div class="countdown" id="countdown"></div>
+        </div>
+        <footer>
+            &copy; 2027 Hanks-Ferrell Family Reunion
+        </footer>
+    </div>
+    <!-- Countdown Clock Script -->
+    <script>
+        // Set the date for the 2027 reunion
+        const reunionDate = new Date("July 18, 2027 09:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = reunionDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "The reunion has started!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s until the reunion!";
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
