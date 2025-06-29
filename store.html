@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Family Reunion Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .store-container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+    }
+    .product {
+      border-bottom: 1px solid #eee;
+      padding: 20px 0;
+    }
+    .product:last-child {
+      border-bottom: none;
+    }
+    .product h2 {
+      margin: 0 0 10px 0;
+      color: #2a5d84;
+    }
+    .product p {
+      margin: 0 0 10px 0;
+    }
+    .product a, .product button {
+      background: #2a5d84;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .product a:hover, .product button:hover {
+      background: #17415c;
+    }
+  </style>
+</head>
+<body>
+  <div class="store-container">
+    <h1>Family Reunion Store</h1>
+
+    <div class="product">
+      <h2>
+        <a href="dues.html">2025 Family Dues (One-Time Payment)</a>
+      </h2>
+      <p>$57.05</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="YOUR_ONE_TIME_BUTTON_ID">
+        <button type="submit">Pay Now with PayPal</button>
+      </form>
+    </div>
+
+    <div class="product">
+      <h2>
+        <a href="installments.html">2025 Family Dues (Monthly Installments)</a>
+      </h2>
+      <p>$15.00/month for 4 months</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick-subscriptions">
+        <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+        <input type="hidden" name="item_name" value="2025 Family Dues Installment">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="a3" value="15.00">
+        <input type="hidden" name="p3" value="1">
+        <input type="hidden" name="t3" value="M">
+        <input type="hidden" name="src" value="1">
+        <input type="hidden" name="srt" value="4">
+        <button type="submit">Pay in Installments</button>
+      </form>
+    </div>
+
+    <div class="product">
+      <h2>
+        <a href="donate.html">Donate to the Reunion</a>
+      </h2>
+      <p>Support our family event!</p>
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
+        <input type="hidden" name="no_recurring" value="0">
+        <input type="hidden" name="item_name" value="Family Reunion Donation">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit">Donate with PayPal</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
 
